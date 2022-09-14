@@ -1,0 +1,22 @@
+cdk-virtual-scroll-viewport {
+  height: calc(100% - 72px);
+  width: 100%;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #6b6b6b;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--ion-color-primary);
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
