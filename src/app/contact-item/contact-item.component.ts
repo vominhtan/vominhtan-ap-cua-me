@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ContactItemComponent implements OnInit {
   @Input()
-  
   contact: any;
 
   constructor() {}
