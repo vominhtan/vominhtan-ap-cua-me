@@ -28,24 +28,12 @@
           [maxBufferPx]="1350"
         >
           <ion-list>
-            <ion-item
+            <app-contact-item
               *cdkVirtualFor="let resultItem of patients$ | async"
               (click)="select(resultItem)"
+              [contact]="resultItem.item"
             >
-              <ion-label>
-                <ion-text>
-                  <h1>
-                    <b
-                      >{{ resultItem.item.patientName }} |
-                      {{ resultItem.item.dob }}</b
-                    >
-                  </h1>
-                </ion-text>
-                <ion-text color="warning">
-                  <h1>{{ resultItem.item.parentName }}</h1>
-                </ion-text>
-              </ion-label>
-            </ion-item>
+            </app-contact-item>
           </ion-list>
         </cdk-virtual-scroll-viewport>
       </ion-content>

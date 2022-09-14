@@ -9,9 +9,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { PatientCardComponent } from './patient-card/patient-card.component';
+import { ContactItemComponent } from './contact-item/contact-item.component';
 
 @NgModule({
-  declarations: [AppComponent, PatientCardComponent],
+  declarations: [AppComponent, PatientCardComponent, ContactItemComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,

@@ -10,11 +10,11 @@ import { patients } from './patients.data';
 export class PatientsService {
   private readonly patients$ = of(patients);
 
-  readonly fuse$ = this.patients$.pipe(  
+  readonly fuse$ = this.patients$.pipe(
     map((patients) => {
       const options = {
         // isCaseSensitive: false,
-        includeScore: false,
+        includeScore: true,
         shouldSort: true,
         // includeMatches: false,
         // findAllMatches: false,
@@ -28,7 +28,11 @@ export class PatientsService {
         // fieldNormWeight: 1,
         keys: ['name', 'fullName', 'patientName', 'parentName', 'note'],
       };
-      return new Fuse(patients, options, Fuse.createIndex(options.keys, patients));
+      return new Fuse(
+        patients,
+        options,
+        Fuse.createIndex(options.keys, patients)
+      );
     })
   );
 
