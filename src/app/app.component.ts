@@ -19,7 +19,7 @@ export class AppComponent {
       return this.searchCriteriaForm.valueChanges.pipe(
         debounceTime(500),
         startWith({ criteria: 'a' }),
-        map(({ criteria }) => fuse.search(criteria))
+        map(({ criteria }) => fuse.search(criteria.trim()))
       );
     }),
     shareReplay()
