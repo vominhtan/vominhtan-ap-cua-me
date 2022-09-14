@@ -34,6 +34,7 @@ export class AppComponent {
               .replaceAll(/[ỚỜỢỞỠớờợởỡơƠ]/gm, 'o')
               .replaceAll(/[íìịỉĩÍÌỊỈĨ]/gm, 'i')
               .replaceAll(/[ÝỲỴỶỸýỳỵỷỹ]/gm, 'y')
+              .replaceAll(/[đĐ]/gm, 'd')
           )
         )
       );
