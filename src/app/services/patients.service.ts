@@ -14,8 +14,8 @@ export class PatientsService {
     map((patients) => {
       return new Fuse(patients, {
         // isCaseSensitive: false,
-        // includeScore: false,
-        // shouldSort: true,
+        includeScore: false,
+        shouldSort: true,
         // includeMatches: false,
         // findAllMatches: false,
         // minMatchCharLength: 1,
@@ -23,7 +23,7 @@ export class PatientsService {
         // threshold: 0.6,
         // distance: 100,
         // useExtendedSearch: false,
-        // ignoreLocation: false,
+        ignoreLocation: true,
         // ignoreFieldNorm: false,
         // fieldNormWeight: 1,
         keys: ['name', 'fullName', 'patientName', 'parentName', 'note'],

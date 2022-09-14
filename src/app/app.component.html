@@ -11,7 +11,7 @@
         <ion-list [formGroup]="searchCriteriaForm">
           <ion-menu-toggle [autoHide]="false">
             <ion-item>
-              <ion-icon slot="start" name="home"></ion-icon>
+              <ion-icon slot="start" name="search"></ion-icon>
               <ion-label [position]="'floating'"> Tìm kiếm </ion-label>
               <ion-input
                 formControlName="criteria"
@@ -35,7 +35,10 @@
               <ion-label>
                 <ion-text>
                   <h1>
-                    <b>{{ resultItem.item.patientName }}</b>
+                    <b
+                      >{{ resultItem.item.patientName }} |
+                      {{ resultItem.item.dob }}</b
+                    >
                   </h1>
                 </ion-text>
                 <ion-text color="warning">
@@ -58,7 +61,7 @@
               </ion-button>
             </ion-menu-toggle>
           </ion-buttons>
-          <ion-title>Thông Tin Bệnh Nhân /ion-title>
+          <ion-title>Thông Tin Bệnh Nhân </ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
