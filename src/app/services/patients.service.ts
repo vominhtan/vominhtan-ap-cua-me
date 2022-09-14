@@ -15,7 +15,7 @@ export class PatientsService {
       const options = {
         // isCaseSensitive: false,
         includeScore: true,
-        shouldSort: true,
+        // shouldSort: true,
         // includeMatches: false,
         // findAllMatches: false,
         // minMatchCharLength: 1,
@@ -29,11 +29,15 @@ export class PatientsService {
         keys: [
           {
             name: 'search.patientFirstName',
-            weight: 4,
+            weight: 5,
           },
           {
             name: 'search.patientLastName',
-            weight: 3,
+            weight: 3.5,
+          },
+          {
+            name: 'search.patientName',
+            weight: 2,
           },
           {
             name: 'search.fullName',
