@@ -28,12 +28,8 @@ export class PatientsService {
         // fieldNormWeight: 1,
         keys: [
           {
-            name: 'patientFirstName',
-            weight: 10,
-          },
-          {
             name: 'search.patientFirstName',
-            weight: 5,
+            weight: 7,
           },
           {
             name: 'search.patientLastName',
@@ -45,7 +41,7 @@ export class PatientsService {
           },
           {
             name: 'search.parentName',
-            weight: 10,
+            weight: 3,
           },
           {
             name: 'search.fullName',
