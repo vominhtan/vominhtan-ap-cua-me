@@ -26,7 +26,20 @@ export class PatientsService {
         ignoreLocation: true,
         // ignoreFieldNorm: false,
         // fieldNormWeight: 1,
-        keys: ['name', 'fullName', 'patientName', 'parentName', 'note'],
+        keys: [
+          {
+            name: 'search.patientFirstName',
+            weight: 4,
+          },
+          {
+            name: 'search.patientLastName',
+            weight: 3,
+          },
+          {
+            name: 'search.fullName',
+            weight: 1,
+          },
+        ],
       };
       return new Fuse(
         patients,
